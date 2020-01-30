@@ -16,10 +16,7 @@
 # It should produce no output.
 #
 # And then you can happily re-install Python 3
-#
-# Written by: Charles R. Severance (@drchuck)
-# https://github.com/csev/uninstall-python3
-# License: Public Domain / MIT - Use any way you like
+
 
 ls -l /usr/local/bin | grep /Library/Frameworks/Python.framework/Versions/3 | awk '{print "rm \47/usr/local/bin/" $9 "\47"}'
 ls -d /Library/Frameworks/Python.framework/Versions/3.* 2> /dev/null | awk '{print "rm -rf \47" $0 "\47"}'
